@@ -56,10 +56,11 @@
          <div class="banner-text">
             <h1 class="responsive-headline">Hi, I'm Sunny</h1>
             
-            <p>and this page has been viewed <a id="counter"></a> times :) </p> 
+            <p>and this page has been viewed <span id="counter"></span> times :) </p>
+
             <ul class="social">
                <li><a href="https://www.linkedin.com/in/sannihith-ravulapalli/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://github.com/madebygps/cgc-azure-resume"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://github.com/sunnyr15/resume-website.git"><i class="fa fa-github"></i></a></li>
             </ul>
          </div>
       </div>
@@ -302,7 +303,7 @@
 
             <ul class="social-links">
                <li><a href="https://www.linkedin.com/in/sannihith-ravulapalli/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://github.com/madebygps/cgc-azure-resume"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://github.com/sunnyr15/resume-website.git"><i class="fa fa-github"></i></a></li>
             </ul>
 
             <ul class="copyright">
@@ -329,6 +330,13 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+   
+   <script>
+      let visitorCount = localStorage.getItem('visitorCount') || 0;
+      visitorCount++;
+      localStorage.setItem('visitorCount', visitorCount);
+      document.getElementById('counter').innerText = visitorCount;
+   </script>
 
 </body>
 
